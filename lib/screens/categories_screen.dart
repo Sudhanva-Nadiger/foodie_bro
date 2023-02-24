@@ -9,12 +9,12 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Foodie Bro',
-            style: TextStyle(fontFamily: 'Raleway'),
-          ),
-        ),
+        // appBar: AppBar(
+        //   title: const Text(
+        //     'Foodie Bro',
+        //     style: TextStyle(fontFamily: 'Raleway'),
+        //   ),
+        // ),
         body: GridView(
           padding: const EdgeInsets.all(25),
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
