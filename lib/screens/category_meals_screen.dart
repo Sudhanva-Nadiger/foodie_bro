@@ -21,7 +21,10 @@ class CategoryMealsScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(categoryName!),
+          title: Text(
+            categoryName!,
+            style: const TextStyle(fontFamily: 'Raleway'),
+          ),
         ),
         body: ListView.builder(
           itemBuilder: (context, index) {

@@ -8,3 +8,4 @@
 - different methods of pushing routes/screens
     1. Navigator.push => can be used on fly by using matrialroute
     2. Navigator.pushNamed: should use routes in home screen scaffold
+- Positioned works only inside the stack
