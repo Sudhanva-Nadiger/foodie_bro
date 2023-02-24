@@ -3,3 +3,8 @@
 - GridView and GridView.builder
     - both are same, but builder is used when there is large elements which we dont know the number of count
 - list map() method will return iterables so add .toList() at the end
+- products are managed as stack.
+- 2018 set and 2021 set for theming names : https://stackoverflow.com/questions/72271461/cannot-mix-2018-and-2021-terms-in-call-to-texttheme-constructor
+- different methods of pushing routes/screens
+    1. Navigator.push => can be used on fly by using matrialroute
+    2. Navigator.pushNamed: should use routes in home screen scaffold
