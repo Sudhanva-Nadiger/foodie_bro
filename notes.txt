@@ -14,3 +14,4 @@
 - home property and initialRoute both mentioned: https://stackoverflow.com/questions/61157848/if-the-home-property-is-specified-the-routes-table-cannot-include-an-entry-for
 - initState() => runs only for the first time when the widget builds, used for api calls
 - didChangeDepndencies <=> useEffect, runs whenever the state changes 
+- data sent by pop navigation method is accessed by .then method of that page push/pushNamed method
