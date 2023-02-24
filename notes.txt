@@ -2,3 +2,4 @@
     - ctrl+f > "//.\*n" > replace all
 - GridView and GridView.builder
     - both are same, but builder is used when there is large elements which we dont know the number of count
+- list map() method will return iterables so add .toList() at the end
