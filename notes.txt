@@ -12,3 +12,5 @@
 - onGenerateRoute: fallBackScreen for unregistered namedRoute
 - onUnknownRoute: executes if onGenerateRoute isnt defined or doesnt return valid action
 - home property and initialRoute both mentioned: https://stackoverflow.com/questions/61157848/if-the-home-property-is-specified-the-routes-table-cannot-include-an-entry-for
+- initState() => runs only for the first time when the widget builds, used for api calls
+- didChangeDepndencies <=> useEffect, runs whenever the state changes 
