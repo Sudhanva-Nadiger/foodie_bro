@@ -52,6 +52,24 @@ class _MyAppState extends State<MyApp> {
   }
 
   List<Meal> _availableMeals = DUMMY_MEALS;
+  List<Meal> _fvrtMeals = [];
+
+  void _toggleFvrt(String mealId) {
+    final existingIndex = _fvrtMeals.indexWhere((meal) => meal.id == mealId);
+    if (existingIndex >= 0) {
+      setState(() {
+        _fvrtMeals.removeAt(existingIndex);
+      });
+    } else {
+      setState(() {
+        _fvrtMeals.add(DUMMY_MEALS.firstWhere((meal) => meal.id == mealId));
+      });
+    }
+  }
+
+  bool _isFvrtMeal(String id) {
+    return _fvrtMeals.any((meal) => meal.id == id);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,10 +98,11 @@ class _MyAppState extends State<MyApp> {
       // home: const CategoriesScreen(),
       initialRoute: '/',
       routes: {
-        '/': (context) => const TabScreen(),
+        '/': (context) => TabScreen(_fvrtMeals),
         CategoryMealsScreen.routeName: (context) =>
             CategoryMealsScreen(_availableMeals),
-        MealDetailsScreen.routeName: (context) => const MealDetailsScreen(),
+        MealDetailsScreen.routeName: (context) =>
+            MealDetailsScreen(_toggleFvrt, _isFvrtMeal),
         FilterScreen.routeName: (context) =>
             FilterScreen(_filters, _setFilters),
       },

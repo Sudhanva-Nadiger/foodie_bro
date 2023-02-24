@@ -3,7 +3,11 @@ import 'package:meals_app/constants/dummy_data.dart';
 
 class MealDetailsScreen extends StatelessWidget {
   static const routeName = '/meal-detail';
-  const MealDetailsScreen({Key? key}) : super(key: key);
+  const MealDetailsScreen(this.toggleFvrt, this.isFvrtMeal, {Key? key})
+      : super(key: key);
+
+  final Function toggleFvrt;
+  final Function isFvrtMeal;
 
   @override
   Widget build(BuildContext context) {
@@ -59,6 +63,10 @@ class MealDetailsScreen extends StatelessWidget {
               ))
             ],
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(isFvrtMeal(mealId) ? Icons.star : Icons.star_border),
+          onPressed: () => toggleFvrt(mealId),
         ),
       ),
     );
