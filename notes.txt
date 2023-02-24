@@ -1,0 +1,4 @@
+- to remove all the boiler plate comment from flutter initial code 
+    - ctrl+f > "//.\*n" > replace all
+- GridView and GridView.builder
+    - both are same, but builder is used when there is large elements which we dont know the number of count
